@@ -15,9 +15,10 @@ console.log(aprovados)
 aprovados.sort()
 console.log(aprovados.length)
 
-console.log(aprovados)
+delete aprovados[1]
+console.log(aprovados[1])
+console.log(aprovados[2])
 
 aprovados = ['Cleiton', 'Samanta', 'Sulivan']
-
 aprovados.splice(1,2)
 console.log(aprovados)
