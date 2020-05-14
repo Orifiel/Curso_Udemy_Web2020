@@ -1,2 +1,6 @@
 web-moderno-master
+<<<<<<< HEAD
 .vscode/settings.json
+=======
+node_modules
+>>>>>>> 8e2a2542b17be6006aa5cdd16f96d0b388fda107
