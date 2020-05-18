@@ -5,7 +5,7 @@ const porta = 3003
 const  app = express()
 
 
-app.use('/produtos', (req, res, next) =>{
+app.get('/produtos', (req, res, next) =>{
    res.send({ nome: 'Notebook', preco: 123.45 })
 })
 
