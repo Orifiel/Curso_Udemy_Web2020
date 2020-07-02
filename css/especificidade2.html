@@ -6,6 +6,20 @@
     <title>Especificidade CSS</title>
     <style>
         /* https://specificity.keegan.st/ */
+        /* calculadora de especificidade do css*/
+        /*
+        1 - inline
+        2 - ID
+        3 - Classe, Pseudo-Classe, Atributo
+        4 - Elemento, Pseudo-elementos
+        */
+        body { font-size: 40px }
+        div {background-color: blue; color: #fff;}
+        div[wm-cor] { background-color: orangered;}
+        div.estilo { background-color: green;}
+        #unico1, #unico2 { background-color: black;}
+        div:hover, #unico1:hover,
+        #unico2:hover  { background-color: purple;}
     </style>
 </head>
 
