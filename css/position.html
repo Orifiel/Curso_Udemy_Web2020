@@ -5,7 +5,54 @@
     <meta charset="UTF-8">
     <title>Position</title>
     <style>
-        /* ... */
+        div {
+          font-size: 60px;
+          padding: 30px;
+          border: solid 5px #222;
+        }
+
+        .static  {
+          top: 100px;
+          left: 100px;
+          background-color: deepskyblue;
+        }
+        .fixed {
+          position: fixed;
+          right: 8px;
+          bottom: 30px;
+          background-color: #d81d1d;
+        }
+        .relative1 {
+          position: relative;
+          left: 50px;
+          top: 5px;
+          background-color: #e91e63;
+        }
+        .absolute1{
+          position: absolute;
+          left: 350px;
+          top: 120px;
+          background-color: violet;
+        }
+
+        .relative2 {
+          /* position: relative; */
+          left: 250px;
+          top:2000px;
+          width: 200px;
+          height: 200px;
+          background-color: slategrey;
+        }
+
+        .absolute2{
+          position: absolute;
+          right: 8px;
+          top: 55px;
+          width: 20px;
+          height: 20px;
+          background-color: orange;
+        }
+
     </style>
 </head>
 
@@ -16,7 +63,7 @@
     <div class="absolute1">Absolute</div>
 
     <div class="relative2">
-        <div class="absolute2"></div>
+    <div class="absolute2"></div>
     </div>
 
     <div class="sticky">Sticky</div>
