@@ -9,6 +9,10 @@ const DB = require('./bancoDeDados')
 app.use(bodyParser.urlencoded({ extended: true}))
 
 app.get('/produtos', (req, res, next) =>{
+
+
+   res.send({ nome: 'Notebook', preco: 123.45 })
+
    res.send(DB.getProdutos())
 })
 
@@ -36,6 +40,7 @@ app.put('/produtos/:id', (req, res, next) => {
 app.delete('/produtos/:id', (req, res, next) => {
    const produto = DB.excluirProdutos(req.params.id)
    res.send(produto)
+
 })
 
 app.listen(porta, () => {
