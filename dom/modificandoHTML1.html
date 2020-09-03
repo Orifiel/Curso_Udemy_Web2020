@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Modificando HTML #01</title>
+    <link rel='stylesheet' href='css/estilo.css'>
+</head>
+
+<body class='conteudo exercicio'>
+    <script>
+       const body = document.querySelector('body')
+       const div1 = document.createElement('div')
+       div1.classList.add('destaque')
+       div1.innerHTML = 'Primeiro'
+
+       const div2 = document.createElement('div')
+       div2.setAttribute('vm-atributo', 'valor')
+       div2.innerHTML = 'Segundo'
+
+       const p = document.createElement('p')
+       p.innerHTML = 'Terceiro'
+
+       const div3 = document.createElement('div')
+       div3.appendChild(p)
+
+       body.appendChild(div1)
+       body.appendChild(div2)
+       body.appendChild(div3)
+
+        //Define o texto a ser inserido
+        const texto = document.createTextNode('Antes...')
+        // Elemento pai
+        // função insertBefore
+        // conteudo aqui representado pela variavel texto
+        // elementopai. nó filho na posição 0
+        div3.insertBefore(texto, div3.childNodes[0])
+
+        //clonando um elemento 
+        const div4 = div3.cloneNode(true)
+        body.appendChild(div4)
+        body.removeChild(div3)
+
+
+    </script>
+</body>
+
+</html>
