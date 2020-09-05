@@ -45,22 +45,36 @@
     </div>
     <div class="direita" wm-dropzone></div>
     <script>
+        //obtendo o array das divs a serem dropadas
         const items = document.querySelectorAll('[wm-dropzone] .item')
-
+        //tratando cada item do array com ForEach, recebendo o item em si e o index dele no array
         items.forEach((item, index) => {
+            //marcando cada item com a propriedade draggable como true.
             item.draggable = true
+            //definindo uma ID caso o item não tenha esse id
             item.id = item.id || `draggable-item-${index}`
+            //adicionando o evento de "pegar" o elemento e passando o evento na função
             item.ondragstart = e => 
+                //adicionando a propriedade dataTransfer do evento ondragstart e adicionando uma ID 
+                //onde item-id é o elemento a ser arrastado
                 e.dataTransfer.setData('item-id', e.target.id)
         })
 
+        //obtendo as áreas (em um array) de dropzone que terão/receberão os elementos movidos
         const dropzones = document.querySelectorAll('[wm-dropzone]')
+        //usando a função forEach para adicionar funcionalidades para cada área 'dropzone'
         dropzones.forEach(dropzone => {
+            //evitando a ação padrão do evento ondragover
             dropzone.ondragover = e => e.preventDefault()
+            //função ondrop que recebe uma nova função e tem o evento como parametro
             dropzone.ondrop = function(e) {
+                //pegando o elemento arrastado para o evento ondrop 
                 const id = e.dataTransfer.getData('item-id')
+                //pegando o elemento arrastado, e alocando ele como item
                 const item = document.getElementById(id)
-                // e.target.appendChild(item)
+                //insere o item (o elemento arrastado, que possui a id), onde ele for 'solto' na pagina
+                e.target.appendChild(item)
+                // alternativa é anexar o item arrastado somente nas áreas 'dropzones' da pagina        
                 dropzone.appendChild(item)
             }
         })
