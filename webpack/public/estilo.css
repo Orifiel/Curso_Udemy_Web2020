@@ -1,0 +1,8 @@
+body {
+  background-image: linear-gradient(to right, darkblue, blue, skyblue); }
+
+.botao {
+  background-color: #19B3E6;
+  color: #fff;
+  font-size: 1.8em; }
+
