@@ -1,5 +1,9 @@
 body {
-  background-image: linear-gradient(to right, darkblue, blue, skyblue); }
+  background-image: linear-gradient(to right, darkblue, blue, skyblue);
+  background-image: url(0428cebb885e5ade058caaa34d5de1c5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh; }
 
 .botao {
   background-color: #19B3E6;

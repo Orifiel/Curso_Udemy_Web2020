@@ -1,3 +1,7 @@
 body {
-    background-image: linear-gradient(to right, darkblue, blue, skyblue);
+    background-color: rgb(252, 5, 128);
+    background-image: url(../images/Dome&Kano2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
   }
