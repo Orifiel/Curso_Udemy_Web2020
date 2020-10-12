@@ -1,12 +1,1 @@
-body {
-  background-image: linear-gradient(to right, darkblue, blue, skyblue);
-  background-image: url(0428cebb885e5ade058caaa34d5de1c5.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh; }
-
-.botao {
-  background-color: #19B3E6;
-  color: #fff;
-  font-size: 1.8em; }
-
+body{background-color:#fc0580;background-image:url(0428cebb885e5ade058caaa34d5de1c5.png);background-repeat:no-repeat;background-position:50%;height:100vh}.botao{background-color:#19b3e6;color:#fff;font-size:1.8em}

@@ -10,8 +10,8 @@ module.exports = {
     mode: modoDev ? 'development' : 'production', //podemos trocar o valor de mode para production, assim o arquivo gerado é minimizado
     entry: './src/principal.js',
     output: {
-        filename: 'principal.js',
-        path: __dirname + '/public'
+        path: __dirname + '/public',
+        filename: 'principal.js'
     },
     devServer: {
         contentBase: "./public",
@@ -32,6 +32,7 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: "estilo.css",
+            
         })
     ],
     module: {
@@ -39,7 +40,7 @@ module.exports = {
             test: /\.s?[ac]ss$/,
             use: [
                 MiniCssExtractPlugin.loader,
-                // 'style-loader', //add CSS a DOM injetando a tag <style>
+                //'style-loader', //add CSS a DOM injetando a tag <style>
                 'css-loader', //interpreta @import, url() ...
                 'sass-loader',
             ]
